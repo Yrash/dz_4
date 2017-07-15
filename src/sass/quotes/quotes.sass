@@ -1,0 +1,45 @@
+.quotes
+  @include visible_content
+  +flex_box(row, space-between,center)    
+  &__left
+    padding-left: 17%
+    @include visible_content
+    width: 5%
+  &__left img
+    cursor: pointer
+    margin-right: 10px
+  &__center    
+    @include visible_content
+    width: 90%
+  &__right 
+    padding-right: 17%
+    @include visible_content
+    width: 5%
+  &__right img
+    cursor: pointer
+    margin-left: 10px
+    transform: rotate(180deg)
+  &:before 
+    @include background_img 
+    background-image: url("./sass/quotes/backgound_img.jpg")
+
+
+.quotes_center
+  +flex_box(column, center,center)
+  &__top
+    top: 50px 
+    transform: rotate(180deg)
+    @include visible_content
+  &__top h3
+    +font(lato_light, 158px, $pink, 900, center, uppercase)
+  &__text
+    @include visible_content 
+    
+   
+  &__text p
+   +font(lato_r, 25px, #989898, 300, center, none)
+  &__bottom
+    @include visible_content
+    top: -50px
+  &__bottom h3
+    +font(lato_light, 158px, $pink, 900, center, uppercase)

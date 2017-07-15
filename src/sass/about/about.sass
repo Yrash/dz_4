@@ -1,0 +1,40 @@
+@import "../mixin.sass";
+
+.about
+  background-color: #f4f4f4
+  position: relative
+  +flex_box(row, space-between , center)
+  +main_padding(100px, 100px)
+  padding-right: 10%
+  &:before 
+    content: ""
+    height: 50px
+    width: 100%   
+    background-color: $pink
+    transform: rotate(-1deg)
+    position: absolute
+    top: -36px
+    left: 0px 
+  &__img
+    width: 60%
+  &__img img
+    width: 140%
+  &__text
+    width: 40%
+.about_text
+  &__title h2
+    +font(lato_lt, 38px, #5a5a5a, 300, left, none)
+    font-style: italic
+  &__strip
+    @include strip
+    +mtb(30px, 30px) 
+
+  &__text
+  &__text p
+    +font(lato_light, 15px, #5a5a5a, 300, left, none)
+  &__link
+    +flex_box(row, flex-start, center)
+    +font(lato_light, 15px, $pink, 900, left, uppercase)
+  &__link p
+    margin-right: 20px
+    +mtb(30px, 30px)

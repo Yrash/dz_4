@@ -1,0 +1,23 @@
+.join_us
+  +main_padding(10px, 10px)
+  height: 150px
+  background-color: $pink
+  +flex_box(row, space-between,center)
+  &__title
+   width: 100%
+  &__title h1
+    +font(lato_light, 27px, white, 900, center, uppercase)
+ 
+  &__button
+    +flex_box(column,center,center)
+    width: 10%
+    
+  &__button button
+    width: 80px
+    background-color: white
+    color: $pink   
+    @include button_top
+  &__button button:focus
+    outline: none
+  &__button button:hover
+    box-shadow: inset 0px 0px 10px 0px #784958

@@ -1,0 +1,39 @@
+.download_now
+  padding: 100px 20% 100px 10% 
+  +flex_box(row,space-between,flex-start)
+  &__img
+    width: 55%
+  &__img img
+    width: 120%  
+
+  &__text
+    width: 30%
+
+.download_now_text
+  &__title 
+    @include visible_content
+  &__title h1
+   +font(lato_lt, 24px, #5a5a5a , 300, left, none)
+  &__strip
+    @include visible_content
+    @include strip
+    +mtb(10px,10px)
+  &__text
+    @include visible_content
+  &__text p
+    +font(lato_light, 15px, #b1b1b1, 300, left, none)
+    +mtb(10px,10px)
+ 
+  &__button
+    @include visible_content
+    +flex_box(column,center,flex-start)
+    width: 100%
+  &__button button
+    width: 150px
+    background-color: $pink
+    color: white   
+    @include button_top
+  &__button button:focus
+    outline: none
+  &__button button:hover
+    box-shadow: inset 0px 0px 10px 0px #784958

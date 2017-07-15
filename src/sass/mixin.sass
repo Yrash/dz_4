@@ -1,0 +1,99 @@
+// fonts 
+@font-face 
+  font-family: lato_r
+  src: url(./sass/fonts/lato/Lato-Regular.ttf)
+@font-face 
+  font-family: lato_b
+  src: url(./sass/fonts/lato/Lato-Bold.ttf)
+@font-face 
+  font-family: lato_lt
+  src: url(./sass/fonts/lato/Lato-LightItalic.ttf)
+@font-face 
+  font-family: lato_lg
+  src: url(./sass/fonts/lato/Lato-Light.ttf)
+@font-face 
+  font-family: lato_bl
+  src: url(./sass/fonts/lato/Lato-Black.ttf)
+@font-face 
+  font-family: lato_light
+  src: url(./sass/fonts/lato/Lato-Light.ttf)
+@font-face 
+  font-family: photo
+  src: url(./sass/fonts/photo/ProximaNova-Regular.ttf)
+$pink : #ed145b 
+
+*
+  padding: 0px
+  margin: 0px
+  vertical-align: baseline;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  border: none;
+  padding: 0;
+  margin: 0;
+@mixin button_top  
+  height: 38px
+  align-items: center
+  border-radius: 23px
+  box-shadow: 0px 0px 10px 0px #6d3838
+  transition: all 2s ease-in-out
+  cursor: pointer
+  text-align: center
+  font-family: lato_b
+  font-size: 15px
+  font-weight: 900
+  text-transform: uppercase
+@mixin strip
+  width: 150px
+  height: 4px
+  background-color: $pink
+
+@mixin background_img 
+  content: ""
+  position: absolute
+  width: 100%
+  height: 100%
+  z-index: 0
+  background-size: 100% 100%
+  background-repeat: no-repeat
+
+@mixin visible_content
+  position: relative
+  z-index: 10
+=mtb($x, $y)
+  margin-bottom: $y 
+  margin-top: $x  
+=flex_box($x, $y, $a)
+  display: flex
+  flex-direction: $x
+  justify-content: $y
+  align-items: $a
+
+
+@mixin tree 
+ width: 33.33%
+ height: 100%
+ display: flex
+
+@mixin fore 
+ width: 25%
+ height: 100%
+ display: flex 
+%pad
+  padding-left: 20%
+  padding-right: 20%
+
+=main_padding($top,$bott)
+  @extend %pad
+  padding-top: $top
+  padding-bottom: $bott
+  
+
+=font($fam,$size,$color,$bol,$align,$tran)
+  text-align: $align
+  font-family: $fam
+  font-size: $size
+  color: $color
+  font-weight: $bol
+  text-transform: $tran

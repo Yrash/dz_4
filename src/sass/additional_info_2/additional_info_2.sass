@@ -1,0 +1,36 @@
+.aditional_info_2
+  position: relative
+  &:before
+    top: 0px
+    left: 0px
+    @include background_img
+    background-image: url("./sass/additional_info_2/img/background_img.jpg")
+  +main_padding(100px, 100px)
+  +flex_box(column,center,center)
+  &__title 
+    @include visible_content
+  &__title h1
+   +font(lato_lt, 38px, white , 300, center, none)
+  &__strip
+    @include visible_content
+    @include strip
+    +mtb(30px,30px)
+  &__text
+    @include visible_content
+  &__text p
+    +font(lato_light, 15px, #d5d5d5, 300, center, none)
+    +mtb(30px,60px)
+ 
+  &__button
+    @include visible_content
+    +flex_box(column,center,center)
+    width: 100%
+  &__button button
+    width: 120px
+    background-color: $pink
+    color: white   
+    @include button_top
+  &__button button:focus
+    outline: none
+  &__button button:hover
+    box-shadow: inset 0px 0px 10px 0px #784958

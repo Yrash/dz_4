@@ -1,0 +1,94 @@
+@import "../mixin.sass";
+
+
+.main
+  width: 100%
+  height: 100%
+  min-height: 400px  
+  
+  @include visible_content
+  +flex_box(column, center, stretch)
+
+  &:after
+    top: 0px
+    left: 0px
+    @include background_img
+    min-height: 400px
+    background-image: url(./sass/header_main/background_img.jpg)
+
+.main__header
+  +flex_box(row, space-between, center)
+  +main_padding(30px,50px)
+  @include visible_content
+
+
+.header
+  width: 100%
+  +flex_box(row, space-between, center)
+  &__logo
+    display: flex
+  &__logo span
+    +font(photo, 25px, $pink, 900, center, uppercase)
+  &__logo h3
+    +font(photo, 25px, white, 900, center, none)    
+  &__menu ul
+    list-style-type: none
+    +flex_box(row, center, center)
+  &__menu li
+ 
+  &__menu a
+    width: 100%
+    height: 100%
+    padding-right: 40px
+    text-align: center
+    text-decoration: none
+    color: white
+    text-transform: uppercase
+
+
+
+.main__text
+  +main_padding(50px,50px)
+  @include visible_content
+
+
+.main_text
+  color: white
+  +flex_box(column, center, center)
+
+  &__title
+    
+   
+    
+  &__title b
+    +font(lato_bl, 46px, white, 900, center, uppercase)
+
+    
+  &__title h1
+    font-weight: 300
+    +font(lato_light, 46px, white, 300, center, uppercase)
+  &__strip
+    @include strip
+    margin: auto
+    margin-top: 30px
+
+  &__present
+    padding-top: 50px
+    padding-bottom: 50px
+    +font(lato_lg, 22px, #a6a6a6, normal, center, none) 
+  &__button button
+    width: 150px
+    height: 45px
+    align-items: center
+    border-radius: 23px
+    background-color: $pink
+    +font(lato_b, 15px, white, 900, center, uppercase)
+    box-shadow: 0px 0px 10px 0px #6d3838
+    transition: all 2s ease-in-out
+    cursor: pointer
+
+    margin-bottom: 100px
+  &__button button:focus
+    outline: none
+  &__button button:hover
+    box-shadow: inset 0px 0px 10px 0px black

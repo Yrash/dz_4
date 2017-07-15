@@ -1,0 +1,28 @@
+.aditional_info
+  +main_padding(100px, 100px)
+  +flex_box(row,space-between,center)
+  flex-wrap: wrap
+  
+  &__items
+    width: 30%
+
+
+.ad_item
+  +mtb(20px, 20px)
+  width: 100%
+  +flex_box(row,space-between,flex-start)
+  &__img 
+    width: 20%
+  &__img img 
+    width: 100%  
+  &__text
+    width: 70%
+.ad_item_text
+  width: 100%
+  &__title h3
+    +mtb(10px, 10px)
+    +font(lato_r, 15px, $pink, 900, left, uppercase)
+    
+  &__text p
+    +font(lato_light, 15px, #5a5a5a, 300, left, none)
+ 

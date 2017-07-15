@@ -1,0 +1,19 @@
+.footer
+  background-color: #2b2b2b
+  padding-top: 50px
+  padding-bottom: 50px
+  +flex_box(row,center,center)
+  &__left_text p
+    +font(lato_r, 15px, #5a5a5a , 300, center, uppercase)
+  &__right_text p
+    +font(lato_r, 15px, #5a5a5a , 300, center, uppercase)
+  &__right_text b
+    +font(lato_r, 15px, #5a5a5a , 900, center, uppercase)
+  &__right_text span
+    +font(lato_r, 15px, $pink , 300, center, uppercase)
+  &__left_text 
+    width: 50%
+    +flex_box(column,center,center)
+  &__right_text
+    width: 50%
+    +flex_box(column,center,center) 

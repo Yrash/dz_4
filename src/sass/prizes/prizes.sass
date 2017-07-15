@@ -1,0 +1,88 @@
+.prizes
+  +main_padding(100px, 100px)
+  +flex_box(column,center,center)
+  background-color: #f4f4f4
+  &__title h1
+    +font(lato_lt, 38px, #5a5a5a, 300, left, none)
+  &__strip
+    @include strip
+    +mtb(30px,30px)
+  &__text
+    +font(lato_light, 15px, #5a5a5a, 300, left, none)
+    +mtb(30px,60px)
+  &__items
+    width: 100%
+  
+
+
+      
+.prizes_items
+  +flex_box(row,space-between,center)
+  flex-wrap: wrap
+  width: 100%
+  &__item
+    min-width: 140px 
+    width: 22%
+    +mtb(10px,10px)
+  &__item
+.pr_item
+  width: 100%
+  height: 300px
+  box-shadow: 0px 0px 10px 0px black
+  +flex_box(column,center,center)
+  &:hover
+    .pr_item__top
+      background-color: $pink
+  &__top
+    padding-top: 10px
+    +flex_box(column,flex-start,center)
+    width: 100%
+    height: 30%
+    background-color: #5a5a5a
+    transition: all 1s ease-in-out
+  &__top p
+    +font(lato_b, 12px, white, 900, center, none)
+  &__top span
+    +font(lato_b, 40px, white, 900, center, none)
+
+  &__bottom
+    height: 70% 
+    position: relative
+.pr_item_bottom
+  +flex_box(column,space-between,stretch)
+
+
+  &__top
+    +flex_box(column,center,center)
+    position: relative
+    top: -19px
+    width: 90%
+    @include button_top
+    background-color: #f4f4f4
+    margin: auto
+    color: #5a5a5a
+  &__top h3
+
+  &__list
+    +mtb(10px,10px)
+    +flex_box(column,center,center)
+  &__list ul
+    list-style-type: none;
+  &__list li
+    +mtb(5px,5px)
+    +font(lato_light, 15px, #999999, 500, center, none)
+
+
+  &__button
+    +flex_box(column,center,center)
+    width: 90%
+    margin: auto
+  &__button button
+    width: 100%
+    background-color: $pink
+    color: white   
+    @include button_top
+  &__button button:focus
+    outline: none
+  &__button button:hover
+    box-shadow: inset 0px 0px 10px 0px #784958

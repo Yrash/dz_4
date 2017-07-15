@@ -1,0 +1,43 @@
+*
+  padding: 0px
+  margin: 0px
+
+@mixin background_img 
+  content: ""
+  position: absolute
+  width: 100%
+  height: 100%
+  z-index: 0
+  background-size: 100% 100%
+  background-repeat: no-repeat
+
+@mixin visible_content
+  position: relative
+  z-index: 10
+  
+@mixin flexBox
+ display: flex
+ justify-content: space-between
+ align-items: center
+@mixin tree 
+ width: 33.33%
+ height: 100%
+ display: flex
+@mixin fore 
+ width: 25%
+ height: 100%
+ display: flex
+
+
+@import './sass/about/about.sass';
+@import './sass/additional_info_2/additional_info_2.sass';
+@import './sass/aditional_info/aditional_info.sass';
+@import './sass/download_now/download_now.sass';
+@import './sass/footer/footer.sass';
+@import './sass/header/header.sass';
+@import './sass/join_us/join_as.sass';
+@import './sass/header_main/header_main.sass';
+@import './sass/news/news.sass';
+@import './sass/our_services/our_services.sass';
+@import './sass/prizes/prizes.sass';
+@import './sass/quotes/quotes.sass';

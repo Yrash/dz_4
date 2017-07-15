@@ -1,0 +1,26 @@
+.our_services
+  +main_padding(100px, 100px)
+  +flex_box(column,center,center)
+  &__title h1
+   +font(lato_lt, 38px, #5a5a5a, 300, left, none)
+  &__strip
+    @include strip
+    +mtb(30px,30px)
+  &__text p
+    +font(lato_light, 15px, #5a5a5a, 300, left, none)
+    +mtb(30px,60px)
+  &__link
+  
+    +font(lato_light, 15px, $pink, 900, left, uppercase)
+    width: 100% 
+
+.our_services_link
+    +flex_box(row,space-between,center)
+    width: 100%
+    flex-wrap: wrap
+    &__items
+      +flex_box(column,center,center)
+      width: 20%
+    &__items img
+      width: 100% 
+      +mtb(0px,30px) 
