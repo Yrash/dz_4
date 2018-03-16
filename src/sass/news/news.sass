@@ -1,6 +1,7 @@
-.news
-  +main_padding(100px, 50px)
+.news .wrap
   +flex_box(column,center,center)
+.news
+  +main_padding(100px, 50px)  
   &__title h1
     +font(lato_lt, 38px, #5a5a5a, 300, left, none)
   &__strip
@@ -17,7 +18,17 @@
     +flex_box(row,space-between,center)
     &__item
       margin-top: 20px
-      width: 30%
+      padding-left: 15px
+      padding-right: 15px
+      box-sizing: border-box
+      +m_query($xs)
+        +boxW(12,12)
+      +m_query($sm)
+        +boxW(12,6)
+      +m_query($md)
+        +boxW(12,4)
+      +m_query($lg)
+        +boxW(12,4)
 .news_items_item
   &:hover
     .news_items_item__img:before

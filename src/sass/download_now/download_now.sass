@@ -1,13 +1,33 @@
+.download_now .wrap
+  +flex_box(row,space-between,flex-start)
+  flex-wrap: wrap
 .download_now
   padding: 100px 20% 100px 10% 
-  +flex_box(row,space-between,flex-start)
+  
   &__img
-    width: 55%
+      +m_query($xs)
+        +boxW(12,12)
+      +m_query($sm)
+        +boxW(12,6)
+      +m_query($md)
+        +boxW(12,6)
+      +m_query($lg)
+        +boxW(12,6)
   &__img img
-    width: 120%  
+    width: 100%  
 
   &__text
-    width: 30%
+      padding-left: 15px
+      padding-right: 15px
+      box-sizing: border-box
+      +m_query($xs)
+        +boxW(12,12)
+      +m_query($sm)
+        +boxW(12,6)
+      +m_query($md)
+        +boxW(12,6)
+      +m_query($lg)
+        +boxW(12,6)
 
 .download_now_text
   &__title 

@@ -1,13 +1,24 @@
-.aditional_info
-  +main_padding(100px, 100px)
+.aditional_info .wrap
   +flex_box(row,space-between,center)
   flex-wrap: wrap
-  
+
+.aditional_info
+  +main_padding(0px, 100px)
   &__items
-    width: 30%
+    padding-left: 15px
+    padding-right: 15px
+    box-sizing: border-box
+    +m_query($xs)
+      +boxW(12,12)
+    +m_query($sm)
+      +boxW(12,6)
+    +m_query($md)
+      +boxW(12,4)
+    +m_query($lg)
+      +boxW(12,4)
 
 
-.ad_item
+.items_block
   +mtb(20px, 20px)
   width: 100%
   +flex_box(row,space-between,flex-start)

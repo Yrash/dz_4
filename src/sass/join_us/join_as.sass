@@ -1,16 +1,22 @@
+.join_us .wrap 
+  +flex_box(row, space-between,center)
+  height: 100%
+  flex-wrap: wrap
+
 .join_us
   +main_padding(10px, 10px)
   height: 150px
   background-color: $pink
-  +flex_box(row, space-between,center)
   &__title
-   width: 100%
+    margin: auto
+    width: 90%
   &__title h1
     +font(lato_light, 27px, white, 900, center, uppercase)
  
   &__button
     +flex_box(column,center,center)
     width: 10%
+    margin: auto
     
   &__button button
     width: 80px

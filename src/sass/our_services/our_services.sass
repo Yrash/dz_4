@@ -1,6 +1,7 @@
+.our_services .wrap
+  +flex_box(column,center,center)  
 .our_services
   +main_padding(100px, 100px)
-  +flex_box(column,center,center)
   &__title h1
    +font(lato_lt, 38px, #5a5a5a, 300, left, none)
   &__strip
@@ -20,7 +21,15 @@
     flex-wrap: wrap
     &__items
       +flex_box(column,center,center)
-      width: 20%
+      +m_query($xs)
+        +boxW(12,12)
+      +m_query($sm)
+        +boxW(12,6)
+      +m_query($md)
+        +boxW(12,4)
+      +m_query($lg)
+        +boxW(12,3)
+     
     &__items img
-      width: 100% 
+      width: 60% 
       +mtb(0px,30px) 

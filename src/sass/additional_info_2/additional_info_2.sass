@@ -1,3 +1,8 @@
+.aditional_info_2 .wrap
+  +flex_box(column,center,center)
+  
+
+
 .aditional_info_2
   position: relative
   &:before
@@ -6,7 +11,6 @@
     @include background_img
     background-image: url("./sass/additional_info_2/img/background_img.jpg")
   +main_padding(100px, 100px)
-  +flex_box(column,center,center)
   &__title 
     @include visible_content
   &__title h1

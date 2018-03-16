@@ -21,6 +21,14 @@
   font-family: photo
   src: url(./sass/fonts/photo/ProximaNova-Regular.ttf)
 $pink : #ed145b 
+$xs: "(min-width: 320px)"
+$sm: "(min-width: 750px)"
+$md: "(min-width: 1024px)"
+$lg: "(min-width: 1200px)"
+
+@mixin m_query($media)
+    @media only screen and #{$media}
+        @content
 
 *
   padding: 0px
@@ -44,6 +52,8 @@ $pink : #ed145b
   font-size: 15px
   font-weight: 900
   text-transform: uppercase
+=boxW($col,$numbe)
+  width: (100% * $numbe)/$col
 @mixin strip
   width: 150px
   height: 4px
@@ -80,12 +90,12 @@ $pink : #ed145b
  width: 25%
  height: 100%
  display: flex 
+.wrap
+  max-width: 1070px
+  margin: auto
 %pad
-  padding-left: 20%
-  padding-right: 20%
 
 =main_padding($top,$bott)
-  @extend %pad
   padding-top: $top
   padding-bottom: $bott
   
@@ -97,3 +107,4 @@ $pink : #ed145b
   color: $color
   font-weight: $bol
   text-transform: $tran
+
